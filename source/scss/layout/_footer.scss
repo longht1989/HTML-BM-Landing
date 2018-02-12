@@ -91,5 +91,11 @@
         @include breakpoint(xs) {
             font-size: 16px;
         }
+        a {
+            color: white;
+            &:hover {
+                color: #ddd;
+            }
+        }
     }
 }
