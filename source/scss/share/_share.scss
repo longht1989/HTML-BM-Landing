@@ -1,0 +1,25 @@
+/* button border  */
+
+.text {
+    &__body {
+        line-height: 1.4em;
+        font-size: 16px;
+        font-weight: 300;
+        @include breakpoint(sm) {
+            font-size: 18px;
+        }
+    }
+}
+
+.btn {
+    border-radius: 5px;
+    transition: all 0.2s linear;
+    padding-left: 16px;
+    padding-right: 16px;
+    background: linear-gradient(to right, #FF4B41, #C5281D);
+    font-weight: 500;
+}
+
+b {
+    font-weight: 500;
+}

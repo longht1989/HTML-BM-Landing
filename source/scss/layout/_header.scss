@@ -1,0 +1,122 @@
+/* ====================================   Header's style   ==================================== */
+
+#site-header {
+    // @include clearfix();
+    margin-bottom: 128px;
+}
+
+.site-header {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 32px;
+    @include breakpoint(sm) {
+        padding-bottom: 24px;
+    }
+    &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: $brand-primary;
+        background: linear-gradient(to right, #FF4B41, #C5281D);
+        z-index: -3;
+    }
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 10;
+        top: calc(100%);
+        background-color: white;
+        min-height: 175px;
+        width: 2000px;
+        -webkit-transform: rotate(-6.5deg);
+        -webkit-transform-origin: 0 0 0;
+        -moz-transform: rotate(-6.5deg);
+        -moz-transform-origin: 0 0 0;
+        -o-transform: rotate(-6.5deg);
+        -o-transform-origin: 0 0 0;
+        -ms-transform: rotate(-6.5deg);
+        -ms-transform-origin: 0 0 0;
+        transform: rotate(-6.5deg);
+        transform-origin: 0 0 0;
+        @include breakpoint(sm) {
+            min-height: 250px;
+        }
+    }
+    .logo {
+        float: left;
+        width: 114px;
+    }
+    &__content {
+        @include breakpoint(sm) {
+            padding-top: 48px;
+            padding-bottom: 0;
+        }
+    }
+    &__topbar {
+        @include clearfix;
+        padding: 12px 0;
+        z-index: 10;
+        @include breakpoint(sm) {
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+    }
+    &__social {
+        float: right;
+        font-size: 0;
+        .sprites {
+            &+.sprites {
+                margin-left: 16px;
+            }
+        }
+    }
+    &__angle {
+        height: 170px;
+        background: white;
+        transform: rotate(-5deg);
+        position: absolute;
+        left: -10%;
+        top: calc(100% - 85px);
+        width: 150%;
+    }
+    .mask {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../img/bg_dark.png);
+        z-index: -2;
+    }
+    &__slogan {
+        color: white;
+        z-index: 2;
+        padding-top: 48px;
+        @include breakpoint(sm) {
+            padding-top: 84px;
+            margin-bottom: 0;
+        }
+        h2 {
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        b {
+            font-size: 1.2em;
+        }
+    }
+    &__mockup {
+        z-index: 20;
+        position: relative;
+        bottom: -32px;
+        @include breakpoint(sm) {
+            height: 461px;
+        }
+    }
+}
