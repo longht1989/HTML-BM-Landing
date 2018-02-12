@@ -29,7 +29,7 @@
         display: block;
         position: absolute;
         z-index: 10;
-        top: calc(100%);
+        top: calc(100% - 30px);
         background-color: white;
         min-height: 175px;
         width: 2000px;
@@ -43,8 +43,10 @@
         -ms-transform-origin: 0 0 0;
         transform: rotate(-6.5deg);
         transform-origin: 0 0 0;
-        @include breakpoint(sm) {
+        left: -20px;
+        @include breakpoint(md) {
             min-height: 250px;
+            top: calc(100%);
         }
     }
     .logo {
@@ -52,8 +54,8 @@
         width: 114px;
     }
     &__content {
-        @include breakpoint(sm) {
-            padding-top: 48px;
+        @include breakpoint(md) {
+            padding-top: 32px;
             padding-bottom: 0;
         }
     }
@@ -98,14 +100,14 @@
     &__slogan {
         color: white;
         z-index: 2;
-        padding-top: 48px;
+        padding-top: 24px;
         @include breakpoint(sm) {
             padding-top: 84px;
             margin-bottom: 0;
         }
         h2 {
             font-weight: 500;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
         b {
             font-size: 1.2em;
@@ -116,6 +118,9 @@
         position: relative;
         bottom: -32px;
         @include breakpoint(sm) {
+            height: 446px;
+        }
+        @include breakpoint(md) {
             height: 461px;
         }
     }

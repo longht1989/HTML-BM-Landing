@@ -98,3 +98,14 @@
         margin-bottom: 16px;
     }
 }
+
+.cta {
+    text-align: center;
+    @include breakpoint(md) {
+        display: none;
+    }
+    .btn {
+        border-radius: 50px;
+        padding: 8px 40px;
+    }
+}

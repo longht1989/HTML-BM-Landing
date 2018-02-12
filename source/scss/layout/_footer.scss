@@ -85,5 +85,11 @@
     }
     .text__body {
         margin-top: 8px;
+        @include breakpoint(320px, 374px) {
+            font-size: 14px;
+        }
+        @include breakpoint(xs) {
+            font-size: 16px;
+        }
     }
 }
